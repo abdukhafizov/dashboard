@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <section class="head">
+        <div class="container">
+            <div class="inps">
+                <h1>Dashboard</h1>
+                <button class="add">Дoбавить задачу</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="change-view">
+
+            <h3>Показать задачи как: </h3>
+            <p class="menu active-view" id="tableView">Таблица</p>
+            <p id="plateView">Плитка</p>
+        </div>
+    </div>
+
+    <div class="all_table">
+
+        <div class="container">
+            <table cellspacing="0">
+                
+                <thead>
+                    <tr>
+                        <th>Загаловок задачи</th>
+                        <th>Описание задачи</th>
+                        <th>Дата</th>
+                        <th>Время</th>
+                        <th>Статус</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <!-- <tr>
+                        <td>To do smth</td>
+                        <td>Rayan Gosling</td>
+                        <td>1997</td>
+                        <td>18:56</td>
+                        <td>Не выполнено</td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+        
+        <section class="boxes hiden">
+        <div class="container">
+            <div class="all_about_boxes">
+                <div class="box">
+                    <h4>
+                        Переписать проект
+                    </h4>
+                    <p class="description">
+                        Quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut
+                        ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto
+                    </p>
+                    <div class="dates">
+                        <p class="date">
+                            21.10.21
+
+                        </p>
+                        <p class="time">
+                            14:31
+                        </p>
+                    </div>
+                    <div class="stat">
+                        Не выполнено
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <dialog class="fade" id="modalAdd">
+        <div class="modal">
+            <h1 class="crossAdd">&Cross;</h1>
+            <h1>Добавить</h1>
+
+            <form name="addForm">
+                <input name="name" placeholder="Загoловок" type="text">
+                <input name="description" placeholder="Описание" type="text">
+                <input name="time" placeholder="Время" type="time">
+                <input name="date" placeholder="Дата" type="date">
+                <select name="status">
+                    <option id="undone" value="new">Не выполнено</option>
+                    <option id="prgs" value="progress">В прогрессе</option>
+                    <option id="done" value="done">Завершено</option>
+                </select>
+                <button>Добавить</button>
+            </form>
+        </div>
+    </dialog>
+
+
+    <script src="./script/script.js"></script>
+</body>
+
+</html>
